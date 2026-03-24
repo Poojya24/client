@@ -39,7 +39,7 @@ function OtpPage() {
 
       <section className="login-hero">
         <div className="hero-badge" />
-        <img src="/designs/rocket.png" alt="otp illustration" />
+        <img src="./build/designs/rocket.png" alt="otp illustration" />
       </section>
     </main>
   );
