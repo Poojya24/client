@@ -7,13 +7,15 @@ import InvoicePage from "./pages/InvoicePage";
 import InvoiceDocumentPage from "./pages/InvoiceDocumentPage";
 import SettingsPage from "./pages/SettingsPage";
 import ImageOnlyPage from "./pages/ImageOnlyPage";
-
+import OtpPage from "./pages/OtpPage";
+import ResetPassword from "./pages/ResetPassword";
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/login" replace />} />
       <Route path="/login" element={<LoginPage />} />
-
+      <Route path="/otp" element={<OtpPage />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/home" element={<DashboardPage variant="overview" />} />
       <Route path="/statistics" element={<DashboardPage variant="statistics" />} />
 

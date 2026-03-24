@@ -34,19 +34,26 @@ function LoginPage() {
   };
 
   const onForgot = async () => {
-    if (!email) {
-      setError("Enter your email first");
-      return;
-    }
+  if (!email) {
+    setError("Enter your email first");
+    return;
+  }
 
-    try {
-      const res = await api.forgotPassword({ email });
-      setInfo(res.message || "Reset link sent");
-      setError("");
-    } catch (err) {
-      setError(err.message || "Unable to send reset link");
-    }
-  };
+  try {
+    const res = await api.forgotPassword({ email });
+
+    console.log("OTP:", res.otp); // 🔥 DEBUG
+
+    // store for next page
+    localStorage.setItem("resetEmail", email);
+    localStorage.setItem("resetOTP", res.otp);
+
+    navigate("/otp"); // 🔥 GO TO OTP PAGE
+
+  } catch (err) {
+    setError(err.message || "Unable to send OTP");
+  }
+};
 
   return (
     <main className="login-page">

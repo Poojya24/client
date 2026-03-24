@@ -1455,4 +1455,12 @@ tbody tr.highlight {
   .login-footer-text {
     font-size: 14px;
   }
+
+  .sidebar {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
