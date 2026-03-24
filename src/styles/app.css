@@ -1306,3 +1306,153 @@ tbody tr.highlight {
   pointer-events: none;
 }
 
+/* Mobile */
+@media (max-width: 768px) {
+
+  /* Layout */
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-area {
+    width: 100%;
+  }
+
+  /* Sidebar → hidden */
+  .sidebar {
+    display: none;
+  }
+
+  /* Top bar */
+  .top-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .top-strip h1 {
+    font-size: 20px;
+  }
+
+  .search-pill {
+    width: 100%;
+  }
+
+  /* Body */
+  .page-body {
+    padding: 10px;
+  }
+
+  /* Cards */
+  .home-top,
+  .chart-row,
+  .stats-tiles-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  /* Stats */
+  .mini-stats.four,
+  .mini-stats.two {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mini-stat strong {
+    font-size: 20px;
+  }
+
+  /* Table scroll */
+  .table-card {
+    overflow-x: auto;
+  }
+
+  .table-card table {
+    min-width: 700px;
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* Buttons */
+  .primary-btn,
+  .primary-btn.wide,
+  .primary-btn.full {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Modal fix */
+  .center-modal,
+  .csv-modal,
+  .confirm-strip {
+    width: 90%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .product-buy-modal input {
+    width: 100%;
+  }
+
+}
+
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+  .top-strip h1 {
+    font-size: 18px;
+  }
+
+  .search-pill {
+    padding: 6px 10px;
+  }
+
+  .mini-stat strong {
+    font-size: 18px;
+  }
+
+  .summary-row p {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  /* Login / Auth pages */
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-hero {
+    display: none;
+  }
+
+  .login-card {
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  .login-card h2 {
+    font-size: 28px;
+  }
+
+  .login-card input {
+    font-size: 14px;
+  }
+
+  .login-footer-text {
+    font-size: 14px;
+  }
+}
